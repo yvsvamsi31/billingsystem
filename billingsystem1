@@ -1,0 +1,3404 @@
+import java.util.Scanner;
+public class Shopping {
+	static Scanner sc=new Scanner(System.in);
+	int finalprice=0;
+	static int i=1;
+	static int j=1;
+	static int k=1;
+	static int l=1;
+	static int total=0;
+	static int[] kg=new int[20];
+	static int[] cod=new int[20];
+    static String nam[]=new String[200];  
+	static int[] val= new int[20] ;
+	
+		
+	
+	void Entry()
+	{
+		
+		System.out.println(
+				"-------------------------------------------------------------------------------------------------------------------");
+				System.out.println(
+				"####################################################################################################################");
+				System.out.println(
+				"-------------------------------------------WELCOME TO JUMANJI STORE-------------------------------------------------");
+				System.out.println(
+				"####################################################################################################################");
+				System.out.println(
+			    "-------------------------------------------------------------------------------------------------------------------");
+				System.out.println("if you want to see the items please type 1");
+				int type=sc.nextInt();
+				
+				switch(type)
+				{
+				case 1:
+					new Shopping().items();
+					break;
+				default :
+					System.out.println("Incorrect option");
+					new Shopping().Entry();
+				}
+	}
+	void items()
+	{
+		
+		System.out.println("1.Fruits ");
+	    System.out.println("2.Vegetables");
+	    System.out.println("3.Cosmetics");
+	    System.out.println("4.Masala Powders");
+	    System.out.println("5.Exit");
+	    System.out.println("---------------------------------------------------------------------------------------------------------");
+	    System.out.println("Please choose your option");
+	    int number=sc.nextInt();
+	    
+	    
+	    switch(number)
+	    {
+	    case 1:
+	    	new Shopping().fruits();
+	    	break;
+	    case 2:
+	    	new Shopping().vegetables();
+	    	break;
+	    case 3:
+	    	new Shopping().cosmetics();
+	    	break;
+	    case 4:
+	    	new Shopping().masalaPowders();
+	    case 5:
+	    	return;
+	    	default :
+	    		System.out.println("choose the right option");
+	    		new Shopping().items();
+	    }
+				
+	}
+
+	void price()
+	{
+		
+		
+		
+		System.out.println("if you want to continue shopping type 1");
+		System.out.println("if you want to stop type 2");
+		int type=sc.nextInt();
+		switch(type)
+		{
+		case 1:
+		  {
+			new Shopping().items();
+			break;
+		  }
+		case 2:
+		  {
+			int f;
+			System.out.println(	"*****************************************************************************************");
+			System.out.println( "!!!----------------------------Welcome to Jumanji Store-------------------------------!!!");
+			System.out.println( "*****************************************************************************************");
+			System.out.println( "-----------------------------------------------------------------------------------------"); 
+			System.out.println( " S.No     Product Name           Product Code       Quantity        Price     Total Price");
+			System.out.println( " ====     =============           ============       ========      ======    ===========");
+			System.out.println( "-----------------------------------------------------------------------------------------");
+			for(f=1;f<i;f++)
+			{
+			System.out.println( "     "+f+"      "+nam[f]+   "       -           "+cod[f]+"       -       "+kg[f]+"      -       "+val[f]+"  -  "+(val[f]*kg[f]));
+			System.out.println("-----------------------------------------------------------------------------------------");
+			}
+			for(f=1;f<=i;f++)
+			{
+				
+				total=total*1+val[f]*kg[f];
+			}
+			
+			System.out.println(" Total bill of purchased items: "+total);
+			System.out.println( "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---Thank you for shopping--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+			System.out.println("*****************************************************************************************");
+			
+			break;
+			
+		  }	
+		  default:
+		  {
+			  System.out.println("Please choose the right option------------------------");
+			  new Shopping().price();
+		  }
+	   }
+	}
+	
+	void fruits()
+	{
+		int value;
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println(" 101   Mango------>1kg-------------->205");
+		System.out.println(" 102   Apple------>1kg-------------->250");
+		System.out.println(" 103   Grapes----->1kg-------------->116");
+		System.out.println(" 104   Guava------>1kg-------------->99");
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Please choose your product code");
+		int code=sc.nextInt();
+		switch(code)
+		{
+			case 101:
+			{
+				String name="Mango";
+	            value=205;
+	            System.out.println("how many kgs do u want?");
+	    		int kgs=sc.nextInt();
+	    		switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=205;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=101;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Mango";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=205;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=101;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Mango";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=205;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=101;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Mango";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=205;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=101;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Mango";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=205;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=101;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Mango";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+	           break; 
+			}
+			case 102:
+			{
+				String name="Apple";
+				value=250;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=250;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=102;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Apple";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=250;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=102;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Apple";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=250;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=102;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Apple";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=250;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=102;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Apple";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=250;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=102;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Apple";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 103:
+			{
+				String name="Grapes";
+				value=116;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=116;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=103;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Grapes";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=116;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=103;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Grapes";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=116;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=103;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Grapes";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=116;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=103;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Grapes";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=116;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=103;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Grapes";
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+	    		}
+			}
+			case 104:
+			{
+				String name="Guava";
+				value=99;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=99;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=104;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Guava";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=99;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=104;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Guava";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=99;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=104;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Guava";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=99;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=104;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Guava";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=99;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=104;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Guava";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			default:
+			{
+				System.out.println("choose the right code");
+			    new Shopping().fruits();
+			}
+		}
+		
+		
+	}
+	void vegetables()
+	{
+		int value;
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println(" 201   Tomato------>1kg-------------->60");
+		System.out.println(" 202   Spinach----->1kg-------------->20");
+		System.out.println(" 203   Beetroot---->1kg-------------->50");
+		System.out.println(" 204   Potato------>1kg-------------->35");
+		System.out.println(" 205   Brinjal----->1kg-------------->45");
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Please choose your product code");
+		int code=sc.nextInt();
+		switch(code)
+		{
+			case 201:
+			{
+				String name="Tomato";
+	            value=60;
+	            System.out.println("how many kgs do u want?");
+	    		int kgs=sc.nextInt();
+	    		switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=60;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=201;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Tomato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=60;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=201;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Tomato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=60;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=201;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Tomato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=60;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=201;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Tomato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=60;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=201;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Tomato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+	    		break;
+	            
+			}
+			case 202:
+			{
+				String name="Spinach";
+				value=20;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=202;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Spinach";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=202;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Spinach";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=202;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Spinach";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=202;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Spinach";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=202;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Spinach";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 203:
+			{
+				String name="Beetroot";
+				value=50;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=203;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="BeetRoot";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=203;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="BeetRoot";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=203;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="BeetRoot";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=203;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="BeetRoot";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=203;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="BeetRoot";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 204:
+			{
+				String name="Potato";
+				value=35;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=35;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=204;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Potato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=35;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=204;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Potato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=35;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=204;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Potato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    			}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=35;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=204;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Potato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=35;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=204;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Potato";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 205:
+			{
+				
+				String name="Brinjal";
+				value=45;
+				System.out.println("how many kgs do u want");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=45;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=205;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Brinjal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=45;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=205;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Brinjal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=45;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=205;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Brinjal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=45;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=205;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Brinjal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=45;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=205;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Brinjal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			default:
+			{
+				System.out.println("choose the right code");
+			    new Shopping().vegetables();
+			}
+		}
+	}
+	void cosmetics()
+	{
+		int value;
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println(" 301   Kajal------->1-------------->10");
+		System.out.println(" 302   Lipstick---->1-------------->20");
+		System.out.println(" 303   Nail Polish->1-------------->50");
+		System.out.println(" 304   Face Powder->1-------------->120");
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Please choose your product code");
+		int code=sc.nextInt();
+		switch(code)
+		{
+			case 301:
+			{
+				String name="Kajal";
+	            value=10;
+	            System.out.println("how many units do u want?");
+	    		int kgs=sc.nextInt();
+	    		switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=10;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=301;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Kajal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=10;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=301;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Kajal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=10;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=301;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Kajal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=10;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=301;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Kajal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=10;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=301;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Kajal";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+	    		break;
+	            
+			}
+			case 302:
+			{
+				
+				String name="Lipstick";
+				value=20;
+				System.out.println("how many units do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=302;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Lipstick";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=302;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Lipstick";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=302;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Lipstick";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=302;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Lipstick";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=20;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=302;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Lipstick";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 303:
+			{
+				String name="Nail Polish";
+				value=50;
+				System.out.println("how many units do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=303;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Nail Polish";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=303;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Nail Polish";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=303;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Nail Polish";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=303;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Nail Polish";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=50;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=303;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Nail Polish";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 304:
+			{
+				String name="Face Powder";
+				value=120;
+				System.out.println("how many units do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=120;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=304;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Face Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=120;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=304;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Face Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=120;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=304;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Face Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=120;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=304;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Face Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=120;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=304;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Face Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			default:
+			{
+				System.out.println("choose the right code");
+			    new Shopping().cosmetics();
+			}
+		}
+	}
+	void masalaPowders()
+	{
+		int value;
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println(" 401   Turmeric Powder------>1kg-------------->330");
+		System.out.println(" 402   Garam Masala--------->1kg-------------->600");
+		System.out.println(" 403   Sambar Powder-------->1kg-------------->360");
+		System.out.println(" 404   Ginger Powder-------->1kg-------------->350");
+		System.out.println(" 405   Chicken Masala------->1kg-------------->370");
+		System.out.println(
+		"-------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Please choose your product code");
+		int code=sc.nextInt();
+		switch(code)
+		{
+			case 401:
+			{
+				String name="Turmeric Powder";
+	            value=330;
+	            System.out.println("how many kgs do u want?");
+	    		int kgs=sc.nextInt();
+	    		switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=330;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=401;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Turmeric Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=330;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=401;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Turmeric Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=330;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=401;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Turmeric Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=330;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=401;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Turmeric Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=330;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=401;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Turmeric Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+	    		break;
+	            
+			}
+			case 402:
+			{
+				String name="Garam Masala";
+				value=600;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=600;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=402;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Garam Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=600;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=402;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Garam Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=600;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=402;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Garam Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=600;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=402;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Garam Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=600;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=402;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Garam Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 403:
+			{
+				String name="Sambar Powder";
+				value=360;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=360;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=403;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Sambar Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=360;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=403;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Sambar Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=360;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=403;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Sambar Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=360;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=403;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Sambar Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=360;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=403;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Sambar Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 404:
+			{
+				String name="Ginger Powder";
+				value=350;
+				System.out.println("how many kgs do u want?");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=350;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=404;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Ginger Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=350;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=404;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Ginger Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=350;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=404;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Ginger Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=350;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=404;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Ginger Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=350;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=404;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Ginger Powder";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			case 405:
+			{
+				String name="Chicken Masala";
+				value=370;
+				System.out.println("how many kgs do u want");
+				int kgs=sc.nextInt();
+				switch(kgs)
+	    		{
+	    		case 1:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=370;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=1;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=405;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Chicken Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 2:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=370;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=2;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=405;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Chicken Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 3:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=370;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=3;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=405;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Chicken Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 4 :
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=370;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=4;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=405;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Chicken Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		case 5:
+	    		{
+	    			int a;
+	    			 
+	    			for(a=1;a<2;)
+	    			{
+	    				val[i]=370;
+	    				i++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				kg[j]=5;
+	    				j++;
+	    				a++;
+	    			}
+	    			for(a=1;a<2;)
+	    			{
+	    				cod[k]=405;
+	    				k++;
+	    				a++;
+	    			}
+	    			
+	    			for(a=1;a<2;)
+	    			{
+	    				nam[l]="Chicken Masala";
+	    				l++;
+	    				a++;
+	    				
+	    			}
+	    			new Shopping().price();
+	    			break;
+	    		}
+	    		}
+				break;
+			}
+			default:
+			{
+				System.out.println("choose the right code");
+			    new Shopping().masalaPowders();
+			}
+		}
+	}
+	
+
+	public static void main(String[] args) 
+	{
+		int f;
+		Shopping Obj=new Shopping();
+		Obj.Entry();
+		
+				
+				
+	}
+
+}
